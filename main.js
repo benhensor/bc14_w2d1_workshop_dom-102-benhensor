@@ -30,6 +30,8 @@ let pennyDisplay = document.querySelector('output');  // create a variable and a
 function handleClick() {
   pennies = pennies * 2;                              // each button click should double the value of the variable pennies
   pennyDisplay.textContent = `${pennies} pennies`;    // uses string interpolation to add the new value for pennie into the output tag
+  //document.title = `${pennies} pennies`;
+  pennyTitleDisplay()
   // 🔺 Remember, this function is already hooked up to the button. You'll learn how to do this yourself soon! Your task is just to write the code inside this function itself.
 }
 
@@ -73,9 +75,6 @@ tipsList.removeChild(tipsList.lastElementChild);            // removes the last 
 // Put the code from task 3 in a function
 // Can you figure out how to have that function be called each time the DOUBLE EM! button is clicked?
 
-
-
-
 function pennyTitleDisplay() {
   document.title = `${pennies} pennies`; 
 
@@ -85,3 +84,20 @@ function multiFunc() {
   handleClick();
   pennyTitleDisplay();
 }
+
+// bonus task 3 - GO NUTS
+
+// on clickme, flip the image
+
+let picFlip = document.getElementById('rich-man');
+
+function flipPic() {
+  if (picFlip.style.transform === '(180deg)') {
+    picFlip.style.transform = 'rotate(0deg)';
+ } else {
+    picFlip.style.transform = 'rotate(180deg)';
+  }
+}
+
+
+console.log(rotateDeg);
