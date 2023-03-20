@@ -98,6 +98,3 @@ function flipPic() {
     picFlip.style.transform = 'rotate(180deg)';
   }
 }
-
-
-console.log(rotateDeg);
