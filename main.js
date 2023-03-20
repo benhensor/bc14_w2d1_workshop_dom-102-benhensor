@@ -57,8 +57,31 @@ let additionalTips = [
   "Don't let your partner know...",
 ];
 
-for (let i = 0; i < additionalTips.length; i++) {
-  additionalTips[i] = document.createElement('li');
-  
-  document.getElementById(`#tips-list`).appendChild(additionalTips);
+for (let i = 0; i < additionalTips.length; i++) {           // for loop indexing the array 'additionalTips'
+  let tips = document.createElement('li');                  // create a variable 'tips' and assign it to a new list element
+  tips.textContent = additionalTips[i];                     // add the text of each entry in the array to a new list element
+  document.getElementById(`tips-list`).appendChild(tips);   // add the new tips to the existing list
+}
+
+// bonus task 1
+
+let tipsList = document.getElementById(`tips-list`);        // new variable assigned to the ul 'tips-list'
+tipsList.removeChild(tipsList.lastElementChild);            // removes the last child of that element
+
+// bonus task 2
+
+// Put the code from task 3 in a function
+// Can you figure out how to have that function be called each time the DOUBLE EM! button is clicked?
+
+
+
+
+function pennyTitleDisplay() {
+  document.title = `${pennies} pennies`; 
+
+}
+
+function multiFunc() {
+  handleClick();
+  pennyTitleDisplay();
 }
